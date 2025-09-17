@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Speed Typing Test</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -15,5 +15,12 @@
         <div id="sentence" class="sentence"></div>
         </div>
     </div>
+    <div class="stats hidden" id="statsBox">
+        <h2>🎉 Test Complete</h2>
+        <p><strong>WPM:</strong> <span id="wpm">0</span></p>
+        <p><strong>Accuracy:</strong> <span id="accuracy">0%</span></p>
+        <button onclick="restartTest()">Try Again</button>
+    </div>
+    
 </body>
 </html>
