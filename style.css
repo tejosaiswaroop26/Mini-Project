@@ -4,4 +4,97 @@ body {
   background-color: #121212;
   color: white;
   font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+ 
+.container {
+  text-align: center;
+  max-width: 90vw;
+}
+ 
+h1 {
+  margin-bottom: 10px;
+  font-size: 2em;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
+}
+ 
+.timer {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+ 
+.sentence-wrapper {
+  overflow-x: auto;
+  white-space: wrap;
+  margin: 20px auto;
+}
+ 
+.sentence {
+    font-size: 2em;
+    display: inline-block;
+    position: relative;
+}
+ 
+.word {
+  display: inline-block;
+  white-space: nowrap;
+  margin-right: 8px;
+}
+ 
+ 
+.char {
+  display: inline-block;
+  margin: 0 2px;
+  padding: 2px 4px;
+  opacity: 0.3;
+  transition: all 0.2s ease;
+}
+ 
+.char.correct {
+  color: #00ffcc;
+  text-shadow: 0 0 8px #00ffcc;
+  opacity: 1;
+}
+ 
+.char.incorrect {
+  color: #ff4d4d;
+  text-shadow: 0 0 8px #ff4d4d;
+  opacity: 1;
+}
+ 
+.char.cursor {
+  border-left: 2px solid #00ffcc;
+  animation: blink 1s step-end infinite;
+}
+ 
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+ 
+.stats {
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00ffcc;
+  text-align: center;
+  margin-top: 30px;
+}
+ 
+.stats.hidden {
+  display: none;
+}
+ 
+.stats button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #00ffcc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
 }
