@@ -162,8 +162,7 @@ async function fetchLeaderboard() {
   const res = await fetch("https://sheetdb.io/api/v1/t3yff650driw6");
   const data = await res.json();
 
-  
-  data.sort((a, b) => (parseInt(b.wpm) + (parseInt(b.accuracy) * 100)) - (parseInt(a.wpm) + (parseInt(a.accuracy) * 100)));
+  data.sort((a, b) => (((parseInt(b.wpm)/400)*100) + parseInt(b.accuracy)) - (((parseInt(a.wpm)/400)*100) + parseInt(a.accuracy)));
 
   leaderboardEl.innerHTML = `
     <table style="width:100%; color:white;">
@@ -187,4 +186,17 @@ async function fetchLeaderboard() {
   `;
 
   leaderboardBox.classList.remove("hidden");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  getBackground(); 
+});
+
+async function getBackground() {
+  const res = await fetch("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY");
+  const image = await res.json();
+  const imageUrl = image.hdurl;
+
+  const bodyTag = document.querySelector("body");
+  bodyTag.style.backgroundImage = `url(${imageUrl})`;
 }
