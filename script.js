@@ -28,11 +28,12 @@ function renderSentence() {
   sentenceEl.innerHTML = "";
 
   const words = sentence.split(" ");
+
   words.forEach((word, wordIndex) => {
     const wordSpan = document.createElement("span");
     wordSpan.classList.add("word");
 
-    for (let i = 0; i < word.length; i++) {
+    for (let i = 0; i < word.length - 1; i++) {
       const charSpan = document.createElement("span");
       charSpan.textContent = word[i];
       charSpan.classList.add("char");
