@@ -75,6 +75,7 @@ function updateDisplay() {
 }
 
 function restartTest() {
+  clearInterval(timer);
   typedChars = [];
   startTime = null;
   timeLeft = 60;
