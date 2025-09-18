@@ -101,6 +101,7 @@ function showResults() {
 
 
 function restartTest() {
+  clearInterval(timer);
   typedChars = [];
   startTime = null;
   timeLeft = 60;
