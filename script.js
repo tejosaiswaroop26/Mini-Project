@@ -163,7 +163,7 @@ async function fetchLeaderboard() {
   const data = await res.json();
 
   
-  data.sort((a, b) => (parseInt(b.wpm) + (parseInt(b.accuracy) * 100)) - (parseInt(a.wpm) + (parseInt(a.accuracy) * 100)));
+  data.sort((a, b) => (((parseInt(b.wpm)/400)*100) + parseInt(b.accuracy)) - (((parseInt(a.wpm)/400)*100) + parseInt(a.accuracy)));
 
   leaderboardEl.innerHTML = `
     <table style="width:100%; color:white;">
