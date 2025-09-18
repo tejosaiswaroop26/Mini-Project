@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Speed Typing Test</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GlowType – Speed Typing Test</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>Speed Typing Test</h1>
-        <div class="timer">⏱️ Time Left: <span id="timer">60</span>s</div>
-        <div class="sentence-wrapper">
-        <div id="sentence" class="sentence"></div>
-        </div>
+  <div class="container">
+    <h1>GlowType – Speed Typing Test</h1>
+    <div class="timer">⏱️ Time Left: <span id="timer">60</span>s</div>
+    <div class="sentence-wrapper">
+      <div id="sentence" class="sentence"></div>
     </div>
+
     <div class="stats hidden" id="statsBox">
         <h2>🎉 Test Complete</h2>
         <p><strong>WPM:</strong> <span id="wpm">0</span></p>
         <p><strong>Accuracy:</strong> <span id="accuracy">0%</span></p>
         <button onclick="restartTest()">Try Again</button>
+
     </div>
-    
+    <div class="stats hidden" id="leaderboardBox">
+      <h2>🏆 Leaderboard</h2>
+      <div id="leaderboard"></div>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
