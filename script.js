@@ -39,7 +39,7 @@ function renderSentence() {
       wordSpan.appendChild(charSpan);
     }
 
-    // Add space after each word except the last
+    
     if (wordIndex < words.length - 1) {
       const spaceSpan = document.createElement("span");
       spaceSpan.textContent = " ";
@@ -161,7 +161,7 @@ async function fetchLeaderboard() {
   const res = await fetch("https://sheetdb.io/api/v1/t3yff650driw6");
   const data = await res.json();
 
-  // Sort by WPM descending
+  
   data.sort((a, b) => parseInt(b.wpm) - parseInt(a.wpm));
 
   leaderboardEl.innerHTML = `
